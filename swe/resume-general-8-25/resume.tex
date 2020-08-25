@@ -1,0 +1,192 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Richard}{Hu}
+{\faEnvelope \ \ \href{mailto:r.hu@berkeley.edu}{r.hu@berkeley.edu} \ \(\bullet\) \ \ \faPhone \ \ (909)  654-1001 \ \(\bullet\) \ \faGithub \ \ \href{https://github.com/rhu2001}{rhu2001} \ \(\bullet\) \ \faLinkedin \ \ \href{https://www.linkedin.com/in/rhu2001/}{rhu2001}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{UC Berkeley}
+\descript{B.S. in Electrical Engineering}
+\descript{and Computer Science}
+\location{ May 2022}
+College of Engineering \\
+\location{ GPA: 3.9 / 4.0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+
+\subsection{Berkeley}
+CS 170: Efficient Algorithms and Intractable Problems \\
+CS 61B: Data Structures (A+) \\
+EE 126: Probability and Random Processes \\
+CS 188: Introduction to Artificial Intelligence \\
+EECS 70: Discrete Mathematics and Probability Theory \\
+CS 61C: Machine Structures \\
+\subsection{Other}
+MATH 265: Linear Algebra \\
+Machine Learning (\href{https://coursera.org/share/f28a9bb54a4cca7c445539ba73aa3d48}{certified by Coursera})
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+
+\subsection{Languages}
+\location{Advanced:}
+\textbullet{} Java \\
+\textbullet{} Python \\
+\textbullet{} \LaTeX\ \\ 
+\location{Familiar:}
+\textbullet{} C++ \\
+\textbullet{} SQL
+
+\subsection{Software}
+\textbullet{} Git \\
+\textbullet{} Unix-like operating systems
+
+\subsection{Other}
+\textbullet{} Unit and integration testing \\
+\textbullet{} Statistics and probability \\
+\textbullet{} Machine learning
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Berkeley EECS Department} \\
+\descript{Undergraduate Student Instructor (uGSI) - EECS 70}
+\location{June 2020 – Present | Berkeley, CA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Teaching discussion sections of 25 students twice a week to reinforce concepts introduced in lecture and holding weekly office hours to assist students
+\item Contributing to weekly staff meetings with professors and other uGSI’s to create plans for incoming weeks
+\item  Creating official \LaTeX \ documents for weekly homework assignments
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Chess AI}
+\descript{| June 2020 - Present}
+\begin{tightemize}
+\item Currently developing a Chess AI in Java that plays using a multi-threaded Monte Carlo tree search with a random rollout policy
+\item Implemented game logic and working on time and space optimizations to maximize the breadth and speed of Monte Carlo tree search
+\item Developed comprehensive unit tests to debug move legality criteria and board display
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Lines of Action}
+\descript{| March 2020 - April 2020}
+\begin{tightemize}
+\item Implemented Lines of Action board game in Java playable via command line or GUI using AWT and Swing
+\item Optimized an alpha–beta pruning game tree search heuristic that won 2nd place in a class-wide tournament with over 450 entrants
+\end{tightemize}
+\sectionsep
+
+\runsubsection{SILAS}
+\descript{| October 2019 - December 2019}
+\begin{tightemize}
+\item Created a linear algebra command line utility using \texttt{argparse} and NumPy to help students understand matrix operations in EECS 16A: Designing Information Devices and Systems I
+\item Developed functionality for storing and retrieving matrices independent of the current working directory
+\item Wrote efficient algorithms to compute row reductions, inversions, and multiplication and display each step
+\end{tightemize}
+
+\runsubsection{Hex Rockets}
+\descript{| September 2018 - January 2019}
+\begin{tightemize}
+\item Collaborated with one friend to develop and maintain a cross-platform mobile game teaching hexadecimal arithmetic
+\item Self-taught basic graphic design and a low-level Java mobile game development package libGDX
+\item Received over 140 installs across iOS and Android with primarily 5-star reviews and won the Congressional App Challenge
+\end{tightemize}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
