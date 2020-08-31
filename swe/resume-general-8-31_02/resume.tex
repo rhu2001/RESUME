@@ -1,0 +1,195 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Richard}{Hu}
+{\faEnvelope \ \ \href{mailto:r.hu@berkeley.edu}{r.hu@berkeley.edu} \ \(\bullet\) \ \ \faPhone \ \ (909)  654-1001 \ \(\bullet\) \ \faGithub \ \ \href{https://github.com/rhu2001}{rhu2001} \ \(\bullet\) \ \faLinkedin \ \ \href{https://www.linkedin.com/in/rhu2001/}{rhu2001}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{E d u c a t i o n} 
+
+\subsection{UC Berkeley}
+\descript{B.S. in Electrical Engineering}
+\descript{and Computer Science}
+\location{ May 2022}
+College of Engineering \\
+\location{ GPA: 3.9 / 4.0}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{C o u r s e w o r k}
+
+\subsection{Berkeley}
+Data Structures \\
+Efficient Algorithms and Intractable Problems \\
+Probability and Random Processes \\
+Introduction to Artificial Intelligence \\
+Discrete Mathematics and Probability Theory \\
+Machine Structures \\
+\subsection{Other}
+Linear Algebra \\
+Machine Learning (\href{https://coursera.org/share/f28a9bb54a4cca7c445539ba73aa3d48}{Coursera certified}) \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{S k i l l s}
+
+\subsection{Languages}
+\location{Advanced:}
+\textbullet{} Java \\
+\textbullet{} Python \\
+\location{Familiar:}
+\textbullet{} C++ \\
+\textbullet{} SQL \\
+
+\subsection{Software}
+\textbullet{} Git \\
+\textbullet{} Unix-like operating systems \\
+
+\subsection{Other}
+\textbullet{} Unit and integration testing \\
+\textbullet{} \LaTeX\ \\ 
+\textbullet{} Statistics and probability \\
+\textbullet{} Machine learning
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{E x p e r i e n c e}
+\vspace{4pt}
+\runsubsection{Berkeley EECS Department} \\
+\descript{Undergraduate Student Instructor (uGSI)}
+\location{June 2020 – Present | Berkeley, CA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\beforetightemize{} % Hacky fix to make tightemize style consistent. Breaks LaTeX but Overleaf works its way around it
+\begin{tightemize}
+\item Teaching discussion sections of 40 students twice a week and holding weekly office hours for Discrete Mathematics and Probability Theory
+\item Contributing to weekly staff meetings with professors and other uGSI’s to create plans for incoming weeks
+\end{tightemize}
+\vspace{4pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{P r o j e c t s}
+\vspace{4pt}
+\runsubsection{\href{https://github.com/rhu2001/ChessAI}{Chess AI}}
+\descript{| June 2020 - Present}
+\begin{tightemize}
+\item Currently developing a Chess AI in Java that plays using a multi-threaded Monte Carlo tree search with a random rollout policy
+\item Developed comprehensive unit tests to debug move legality criteria and board display
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Lines of Action}
+\descript{| March 2020 - April 2020}
+\begin{tightemize}
+\item Implemented Lines of Action board game in Java playable via command line or GUI using AWT and Swing
+\item Optimized an alpha–beta pruning game tree search heuristic that won 2nd place in a class-wide tournament with over 450 entrants
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://github.com/rhu2001/silas}{SILAS}}
+\descript{| October 2019 - December 2019}
+\begin{tightemize}
+\item Created linear algebra command line utility using Python, \texttt{argparse}, and NumPy to help students understand matrix operations in EECS 16A
+\item Developed functionality for saving and retriving matrices and displaying steps for matrix operations
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://github.com/rhu2001/Hex-Rockets}{Hex Rockets}}
+\descript{| September 2018 - January 2019}
+\begin{tightemize}
+\item Collaborated with one friend to develop and maintain a Java cross-platform mobile game teaching hexadecimal arithmetic
+\item Received over 140 installs across iOS and Android with primarily 5-star reviews and won the Congressional App Challenge
+\end{tightemize}
+\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
