@@ -1,0 +1,200 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Richard}{Hu}
+{\faEnvelope \ \ \href{mailto:r.hu@berkeley.edu}{r.hu@berkeley.edu} \ \(\bullet\) \ \ \faPhone \ \ (909)  654-1001 \ \(\bullet\) \ \faGithub \ \ \href{https://github.com/rizhu}{rizhu} \ \(\bullet\) \ \faLinkedin \ \ \href{https://www.linkedin.com/in/rhu2001/}{rhu2001}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{E d u c a t i o n} 
+
+\subsection{UC Berkeley}
+\descript{B.S. in Electrical Engineering}
+\descript{and Computer Science}
+\location{ May 2022}
+College of Engineering \\
+\location{ GPA: 3.93 / 4.0}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{C o u r s e w o r k}
+
+\subsection{Berkeley}
+Probability and Random Processes \\
+Introduction to Artificial Intelligence \\
+Efficient Algorithms and Intractable Problems \\
+Great Ideas in Computer Architecture \\
+Computational Learning Theory (IP) \\
+Optimization Models in Engineering (IP)
+\subsection{Other}
+Linear Algebra \\
+Machine Learning (Stanford CS 229) \\
+Convolutional Neural Networks for Visual Recognition (Stanford CS 231n) \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{S k i l l s}
+
+\subsection{Languages}
+\location{Advanced:}
+\textbullet{} Java \\
+\textbullet{} Python \\
+\location{Familiar:}
+\textbullet{} C \\
+\textbullet{} C++ \\
+\textbullet{} SQL \\
+
+\subsection{Software}
+\textbullet{} Git \\
+\textbullet{} Unix-like operating systems \\
+
+\subsection{Other}
+\textbullet{} Tensorflow \\
+\textbullet{} NumPy \\ 
+\textbullet{} Machine learning \\
+\textbullet{} Statistics and probability
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{E x p e r i e n c e}
+\vspace{4pt}
+\runsubsection{Berkeley EECS Department} \\
+\descript{Undergraduate Student Instructor (uGSI)}
+\location{Head uGSI January 2020 - Present, June 2020 – Present | Berkeley, CA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\beforetightemize{} % Hacky fix to make tightemize style consistent. Breaks LaTeX but Overleaf works its way around it
+\begin{tightemize}
+\item Teaching discussion sections of 40 students twice a week and holding weekly office hours for Discrete Mathematics and Probability Theory
+\item Received 4.53/5 average rating from students, over 1 standard deviation above department average, and 5/5 median rating
+\end{tightemize}
+\vspace{4pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{P r o j e c t s}
+\vspace{4pt}
+\runsubsection{\href{https://github.com/rizhu/riznets}{riznets}}
+\descript{| December 2020 - Present}
+\begin{tightemize}
+\item Developing neural network architectures (feedforward, CNN, RNN) \textbf{from scratch using NumPy} along with basic CLI to manage and train
+\item Simple feedforward neural network achieves \textbf{93\% test accuracy} when \textbf{trained on subset} of MNIST dataset
+\item Currently working on manually implementing CNN architecture and backpropagation
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Lines of Action}
+\descript{| March 2020 - April 2020}
+\begin{tightemize}
+\item Implemented Lines of Action board game in Java playable via command line or GUI using AWT and Swing
+\item Optimized an alpha–beta pruning game tree search heuristic that \textbf{won 2nd place} in 500-entrant tournament
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://github.com/rizhu/silas}{SILAS}}
+\descript{| October 2019 - December 2019}
+\begin{tightemize}
+\item Created linear algebra command line utility using Python and NumPy to help students visualize computations in EECS 16A
+\item \textbf{Substantially improved} many users' understanding of elementary matrix operations
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://github.com/rizhu/Hex-Rockets}{Hex Rockets}}
+\descript{| September 2018 - January 2019}
+\begin{tightemize}
+\item \textbf{Collaborated with a friend} to develop and maintain a Java cross-platform mobile game teaching hexadecimal arithmetic
+\item \textbf{Won the Congressional App Challenge} and received over \textbf{100 installs} across iOS and Android with \textbf{primarily 5-star reviews}
+\end{tightemize}
+\sectionsep
+
+\end{minipage} 
+\end{document}
+
+\documentclass[]{article}
