@@ -1,0 +1,187 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\ritem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\huge Richard Hu}} & Email : \href{mailto:rizhu@berkeley.edu}{rizhu@berkeley.edu} \\
+   & Mobile : +1 (909) 654-1001 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+    \resumeHeading
+      {University of California, Berkeley}{Berkeley, CA}
+      {Electrical Engineering and Computer Science B.S. | GPA: 3.95}{August 2019 -- December 2023}
+    \resumeItemListStart
+        \resumeItem{Courses}{Algorithms, Operating Systems, Data Structures, Machine Learning, Artificial Intelligence, Computer Architecture, Probability and Stochastic Processes, Convex Optimization, Linear Algebra}
+        \resumeItem{Honors}{Dean’s List, Eta Kappa Nu (HKN) EECS Honor Society, Tau Beta Pi (TBP) Engineering Honor Society}
+    \resumeItemListEnd
+    
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+        {University of California, Berkeley}{Berkeley, CA}
+          {Undergraduate Research Assistant (advised by Professor James Demmel)}{August 2021 -- Present}
+          \resumeItemListStart
+            \ritem{Conduct experiments with another undergraduate student using \textbf{randomized SVD}, \textbf{single precision SGEQP3.f}, and \textbf{QR decomposition} to compress model parameters for federated learning}
+            \ritem{Report results and discuss next steps and ideas in weekly meetings with 3 PhD students and professor}
+            \ritem{\textbf{Achieved 80\% test accuracy} on federated MNIST dataset with randomized SVD using 30 singular values}
+          \resumeItemListEnd
+    \resumeSubSubheading
+     {Head Teaching Assistant (TA) - CS 70 Discrete Mathematics and Probability Theory}{June 2020 -- Present}
+     \resumeItemListStart
+        \ritem{Manage \textbf{over 50 members of course staff}, teach discussion sections of \textbf{40 students}, and coordinate course logistics with 4 other head TAs and 2 professors for a class of \textbf{over 850 students}}
+        \ritem{Spearheaded course staff hiring by evaluating \textbf{over 300 applicants} and corresponding with EECS department hiring coordinators}
+        \ritem{Rated \textbf{4.7 / 5} on average by students and won \textbf{Outstanding Graduate Student Instructor Award (2021)}, awarded to \textbf{top 10\% of TAs university-wide}}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Amazon}{Bellevue, WA}
+      {Software Development Engineer Intern}{May 2021 -- August 2021}
+      \resumeItemListStart
+        \ritem{Developed internal debugging tool to rapidly store and retrieve transporter itineraries using \textbf{Java} and \textbf{Typescript}}
+        \ritem{Consulted with \textbf{3 engineers} on On-Road Execution team to set up \textbf{AWS S3 buckets}, \textbf{AWS Glue Tables}, and \textbf{AWS Kinesis Firehose} delivery streams using \textbf{AWS CDK}}
+        \ritem{Defined APIs to push itineraries through Firehose delivery stream to S3 buckets and query \textbf{AWS Athena} to retrieve itineraries by time range and transporter ID, and modified existing backend workflow to utilize new APIs}
+        \ritem{Reduced time required for all itinerary-related debugging by \textbf{95\%}, from \textbf{20 minutes} down to less than \textbf{1 minute}}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading{m37 - Algorithmic cryptocurrency trading}{October 2021 -- Present}
+      \resumeItemListStart
+        \ritem{Forecast cryptocurrency k-line averages with ARIMA and GARCH models using \textbf{Jupyter Notebook}, \textbf{\texttt{numpy}}, \textbf{\texttt{statsmodels}}, and  \textbf{\texttt{arch}}}
+        \ritem{Attained \textbf{0.04\% average error} on Bitcoin k-line mean forecasts with \textbf{over 80\%} of forecasts lying between the actual high and low of the k-line period}
+      \resumeItemListEnd
+  
+    \resumeProjectHeading{Lines of Action}{March 2020 -- April 2020}
+      \resumeItemListStart
+        \ritem{Implemented 2-player Lines of Action board game in Java playable via terminal or GUI using AWT and Swing}
+        \ritem{Researched game tree evaluation and implemented an AI based on \textbf{\underline{\href{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.4.3549&rep=rep1&type=pdf}{Winands et al. 2001}}}, winning \textbf{second place} in a course-wide tournament of over \textbf{400 competitors}}
+      \resumeItemListEnd
+    
+    \resumeProjectHeading{Hex Rockets}{September 2018 -- January 2019}
+      \resumeItemListStart
+        \ritem{\textbf{Collaborated with one friend} using \textbf{low-level Java game development library} to develop and maintain a cross-platform mobile game teaching hexadecimal arithmetic }
+        \ritem{\textbf{Won Congressional App Challenge} and received \textbf{over 100} installs across iOS and Android with \textbf{primarily 5-star} reviews}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+\section{Skills}
+    \textbf{Advanced}: Java, Python, C, NumPy, Jupyter Notebook, Git, Machine Learning, Statistics
+    
+    \textbf{Familiar}: C++, JavaScript, Typescript, SQL, Unix-like Operating Systems, AWS, TensorFlow, PyTorch
+
+\end{document}
