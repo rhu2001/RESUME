@@ -106,10 +106,13 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\huge Richard Hu}} & Email : %\href{mailto:rizhu@berkeley.edu}{rizhu@berkeley.edu} \\
+  \textbf{{\Huge Richard Hu}} & Email :
+%   \textbf{{\Huge Imran Khaliq}} & Email : %\href{mailto:rizhu@berkeley.edu}{rizhu@berkeley.edu} \\
    %& Mobile : +1 (669) 295-3414 \\
   \href{mailto:r.hu@berkeley.edu}{r.hu@berkeley.edu} \\
-   & Mobile : +1 (909) 654-1001 \\
+  & Mobile : +1 (909) 654-1001 \\
+%   \href{mailto:imran.khaliq@berkeley.edu}{imran.khaliq@berkeley.edu} \\
+%   & Mobile : +1 (628) 257-4133 \\
 \end{tabular*}
 
 
@@ -119,8 +122,8 @@
       {University of California, Berkeley}{Berkeley, CA}
       {Electrical Engineering and Computer Science B.S. | GPA: 3.92}{August 2019 -- May 2023}
     \resumeItemListStart
-        \resumeItem{Courses}{Algorithms, Operating Systems, Data Structures, Parallel Computing (Graduate), Machine Learning, Artificial Intelligence, Computer Architecture, Probability and Stochastic Processes, Convex Optimization, Linear Algebra, Computational Learning Theory (Graduate), Signal Processing}
-        \resumeItem{Honors}{Dean’s List, Eta Kappa Nu (HKN) EECS Honor Society}
+        \resumeItem{Courses}{Algorithms, Operating Systems, Data Structures, Parallel Computing (Graduate), Machine Learning, AI, Computer Architecture, Probability and Stochastic Processes, Time Series, Convex Optimization, Linear Algebra}
+        \resumeItem{Honors}{Dean’s List, Eta Kappa Nu (HKN) Honor Society, EECS Honor Society}
     \resumeItemListEnd
     
 
@@ -131,25 +134,11 @@
   
     \resumeSubheading
       {The Voleon Group}{Berkeley, CA}
-      {Software Engineer Intern - Infrastructure Engineering Team}{May 2022 -- Present}
+      {Software Engineer Intern - Infrastructure Engineering Team}{May 2022 -- August 2022}
       \resumeItemListStart
-        \ritem{Developing internal metrics collection tool for flaky test detection}
-      \resumeItemListEnd
-  
-    \resumeSubheading
-        {University of California, Berkeley}{Berkeley, CA}
-          {Undergraduate Research Assistant (advised by Professor James Demmel)}{August 2021 -- Present}
-          \resumeItemListStart
-            \ritem{RayLEAF: Explore applications of communication-reducing mechanisms via \textbf{randomized linear algebra}, and \textbf{differential privacy} in \textbf{federated learning} settings}
-            \ritem{Develop and optimize fast and scalable experiment framework using \textbf{PyTorch} and \textbf{Ray}, achieving over \textbf{60x} speedup over existing frameworks}
-            \ritem{Report results and discuss next steps and ideas in weekly meetings and deliver talks in internal lab meetings}
-          \resumeItemListEnd
-    \resumeSubSubheading
-     {Head Teaching Assistant (TA) - CS 70 Discrete Mathematics and Probability Theory}{June 2020 -- Present}
-     \resumeItemListStart
-        \ritem{Manage \textbf{over 50 members of course staff}, teach discussion sections of \textbf{40 students}, and coordinate course logistics with 4 other head TAs and 2 professors for a class of \textbf{over 850 students}}
-        \ritem{Spearheaded course staff hiring by evaluating \textbf{over 300 applicants} and corresponding with EECS department hiring coordinators}
-        \ritem{Rated \textbf{4.7 / 5} on average by students and won \textbf{Outstanding Graduate Student Instructor Award (2021)}, awarded to \textbf{top 10\% of TAs university-wide}}
+        \ritem{Created metrics collection tool and dashboard for flaky test detection, using \textbf{Python}, \textbf{Docker}, \textbf{Groovy}, \textbf{Elasticsearch}, and \textbf{Kibana}, and proposed specifications to engineers across \textbf{2 teams}}
+        \ritem{Enabled consistent enforcement of flaky test guidelines, reducing time to identify severity of flaky tests by over \textbf{98\%} from over \textbf{1 hour} to \textbf{1 minute} and saving over \textbf{9 person-hours} per week}
+        \ritem{Profiled and analyzed \textbf{Airflow} DAGs to identify sources of slowdown within critical production jobs and detected multiple functions causing substantial slowdown in over \textbf{80\%} of DAGs}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -157,9 +146,24 @@
       {Software Development Engineer Intern - On-Road Execution team}{May 2021 -- August 2021}
       \resumeItemListStart
         \ritem{Developed internal debugging tool to rapidly store and retrieve transporter itineraries using \textbf{Java} and \textbf{Typescript}}
-        \ritem{Consulted with \textbf{3 engineers} to set up \textbf{AWS S3 buckets}, \textbf{AWS Glue Tables}, and \textbf{AWS Kinesis Firehose} delivery streams using \textbf{AWS CDK}}
-        \ritem{Defined APIs to push itineraries through Firehose delivery stream to S3 buckets and query \textbf{AWS Athena} to retrieve itineraries by time range and transporter ID, and modified existing backend workflow to utilize new APIs}
-        \ritem{Reduced time required for all itinerary-related debugging by \textbf{95\%}, from \textbf{20 minutes} down to less than \textbf{1 minute}}
+        \ritem{Collaborated with \textbf{3 engineers} to set up \textbf{AWS S3 buckets}, \textbf{AWS Glue Tables}, and \textbf{AWS Kinesis Firehose delivery streams} using \textbf{AWS CDK}}
+        \ritem{Defined APIs to push itineraries through Firehose delivery stream to S3 buckets and query \textbf{AWS Athena} to retrieve itineraries by time range and transporter ID, and modified existing backend to utilize new APIs}
+        \ritem{Reduced all itinerary-related human debugging time by \textbf{95\%}, from \textbf{20 minutes} down to less than \textbf{1 minute}}
+      \resumeItemListEnd
+  
+    \resumeSubheading
+        {University of California, Berkeley}{Berkeley, CA}
+          {Undergraduate Research Assistant - SLICE Lab (advised by Professor James Demmel)}{August 2021 -- Present}
+          \resumeItemListStart
+            \ritem{Lead research group exploring applications of communication-reduction and privacy-preservation via \textbf{randomized linear algebra}, and \textbf{differential privacy} in \textbf{federated learning} settings}
+            \ritem{\textbf{\underline{\href{https://github.com/rizhu/rayleaf-source}{RayLEAF}}}: Design, develop, and optimize \textbf{fast and scalable} benchmark with \textbf{flexible APIs} using \textbf{PyTorch} and \textbf{Ray}, achieving over \textbf{60x} speedup over existing frameworks}
+          \resumeItemListEnd
+    \resumeSubSubheading
+     {Head Teaching Assistant (TA) - CS 70 Discrete Mathematics and Probability Theory}{June 2020 -- Present}
+     \resumeItemListStart
+        \ritem{Manage \textbf{over 50 members of course staff}, teach discussion sections of \textbf{40 students}, and coordinate course logistics with 4 other head TAs and 2 professors for a class of \textbf{over 850 students}}
+        %\ritem{Spearheaded course staff hiring by evaluating \textbf{over 300 applicants} and corresponding with EECS department hiring coordinators}
+        \ritem{Rated \textbf{4.7 / 5} on average by students and won \textbf{Outstanding Graduate Student Instructor Award (2021)}, awarded to \textbf{top 10\% of TAs university-wide}}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -168,16 +172,16 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeProjectHeading{Parallelizing De Novo Genome Assembly}{March 2022 -- April 2022}
+    \resumeProjectHeading{Parallel De Novo Genome Assembly}{March 2022 -- April 2022}
       \resumeItemListStart
-        \ritem{Developed and implemented algorithm to parallelize genome assembly using a \textbf{distributed hash table with linear probing} built using \textbf{C++}, \textbf{shared memory parallelism}, and \textbf{distributed memory parallelism}}
-        \ritem{Attained \textbf{4 times speedup} over baseline parallel solution and \textbf{several orders of magnitude of speedup} over baseline serial solution}
+        \ritem{Partnered with \textbf{2 students} to develop parallel algorithm for genome assembly using a \textbf{distributed hash table with linear probing} built using \textbf{C++}, \textbf{shared memory parallelism}, and \textbf{distributed memory parallelism}}
+        \ritem{Achieved \textbf{4x speedup} over baseline parallel solution and \textbf{over 100x speedup} over baseline serial solution, placing in the top \textbf{10\%} in a course of over 100 graduate students}
       \resumeItemListEnd
   
     \resumeProjectHeading{Lines of Action}{March 2020 -- April 2020}
       \resumeItemListStart
         \ritem{Implemented 2-player Lines of Action board game in Java playable via terminal or GUI using AWT and Swing}
-        \ritem{Researched game tree evaluation and implemented an AI based on \textbf{\underline{\href{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.4.3549&rep=rep1&type=pdf}{Winands et al. 2001}}}, winning \textbf{second place} in a course-wide tournament of over \textbf{400 competitors}}
+        \ritem{Researched game tree evaluation and engineered an AI based on \textbf{\underline{\href{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.4.3549&rep=rep1&type=pdf}{Winands et al. 2001}}}, winning \textbf{second place} in a course-wide tournament of over \textbf{400 competitors}}
       \resumeItemListEnd
     
     % \resumeProjectHeading{Hex Rockets}{September 2018 -- January 2019}
@@ -191,6 +195,6 @@
 \section{Skills}
     \textbf{Advanced}: Java, Python, C, C++, Git, Machine Learning, Statistics, NumPy, PyTorch, Parallel Computing, OpenMP, Open MPI, CUDA, UPC++, Ray
     
-    \textbf{Familiar}: JavaScript, Typescript, SQL, Unix-like Operating Systems, AWS, TensorFlow
+    \textbf{Familiar}: JavaScript, Typescript, SQL, Unix, AWS, TensorFlow, Jax, Elasticsearch, Docker, Kubernetes
 
 \end{document}
